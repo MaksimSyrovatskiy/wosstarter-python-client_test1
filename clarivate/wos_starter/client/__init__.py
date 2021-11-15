@@ -1,3 +1,5 @@
+# flake8: noqa
+
 """
     Web of Science™ Starter API
 
@@ -8,28 +10,18 @@
 """
 
 
-import sys
-import unittest
+__version__ = "1.0.0"
 
-import clarivate.wos_starter.client
-from clarivate.wos_starter.client.model.journal_links import JournalLinks
+# import ApiClient
+from clarivate.wos_starter.client.api_client import ApiClient
 
+# import Configuration
+from clarivate.wos_starter.client.configuration import Configuration
 
-class TestJournalLinks(unittest.TestCase):
-    """JournalLinks unit test stubs"""
-
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
-
-    def testJournalLinks(self):
-        """Test JournalLinks"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = JournalLinks()  # noqa: E501
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+# import exceptions
+from clarivate.wos_starter.client.exceptions import OpenApiException
+from clarivate.wos_starter.client.exceptions import ApiAttributeError
+from clarivate.wos_starter.client.exceptions import ApiTypeError
+from clarivate.wos_starter.client.exceptions import ApiValueError
+from clarivate.wos_starter.client.exceptions import ApiKeyError
+from clarivate.wos_starter.client.exceptions import ApiException

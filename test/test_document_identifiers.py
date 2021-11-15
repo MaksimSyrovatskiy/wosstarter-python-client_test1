@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.document_identifiers import DocumentIdentifiers
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.document_identifiers import DocumentIdentifiers
 
 
 class TestDocumentIdentifiers(unittest.TestCase):

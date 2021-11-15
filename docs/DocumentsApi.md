@@ -1,4 +1,4 @@
-# clarivate_wos_starter_client.DocumentsApi
+# clarivate.wos_starter.client.DocumentsApi
 
 All URIs are relative to *http://example.com*
 
@@ -20,19 +20,19 @@ TODO
 
 ```python
 import time
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.api import documents_api
-from clarivate_wos_starter_client.model.documents_list import DocumentsList
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.api import documents_api
+from clarivate.wos_starter.client.model.documents_list import DocumentsList
 from pprint import pprint
 # Defining the host is optional and defaults to http://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = clarivate_wos_starter_client.Configuration(
+configuration = clarivate.wos_starter.client.Configuration(
     host = "http://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with clarivate_wos_starter_client.ApiClient() as api_client:
+with clarivate.wos_starter.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = documents_api.DocumentsApi(api_client)
     q = "q_example" # str | 
@@ -46,7 +46,7 @@ with clarivate_wos_starter_client.ApiClient() as api_client:
         # Query Web of Science documents 
         api_response = api_instance.documents_get(q)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling DocumentsApi->documents_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
@@ -55,7 +55,7 @@ with clarivate_wos_starter_client.ApiClient() as api_client:
         # Query Web of Science documents 
         api_response = api_instance.documents_get(q, db=db, page=page, limit=limit, sort_field=sort_field)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling DocumentsApi->documents_get: %s\n" % e)
 ```
 
@@ -102,19 +102,19 @@ No authorization required
 
 ```python
 import time
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.api import documents_api
-from clarivate_wos_starter_client.model.document import Document
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.api import documents_api
+from clarivate.wos_starter.client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = clarivate_wos_starter_client.Configuration(
+configuration = clarivate.wos_starter.client.Configuration(
     host = "http://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with clarivate_wos_starter_client.ApiClient() as api_client:
+with clarivate.wos_starter.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = documents_api.DocumentsApi(api_client)
     uid = "uid_example" # str | 
@@ -123,7 +123,7 @@ with clarivate_wos_starter_client.ApiClient() as api_client:
     try:
         api_response = api_instance.documents_uid_get(uid)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling DocumentsApi->documents_uid_get: %s\n" % e)
 ```
 

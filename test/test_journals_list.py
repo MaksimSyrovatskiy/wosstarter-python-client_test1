@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.journal import Journal
-from clarivate_wos_starter_client.model.metadata import Metadata
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.journal import Journal
+from clarivate.wos_starter.client.model.metadata import Metadata
 globals()['Journal'] = Journal
 globals()['Metadata'] = Metadata
-from clarivate_wos_starter_client.model.journals_list import JournalsList
+from clarivate.wos_starter.client.model.journals_list import JournalsList
 
 
 class TestJournalsList(unittest.TestCase):

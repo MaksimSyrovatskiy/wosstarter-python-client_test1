@@ -105,7 +105,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import clarivate_wos_starter_client
+import clarivate.wos_starter.client
 ```
 
 ### Setuptools
@@ -119,7 +119,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import clarivate_wos_starter_client
+import clarivate.wos_starter.client
 ```
 
 ## Getting Started
@@ -129,21 +129,21 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import clarivate_wos_starter_client
+import clarivate.wos_starter.client
 from pprint import pprint
-from clarivate_wos_starter_client.api import documents_api
-from clarivate_wos_starter_client.model.document import Document
-from clarivate_wos_starter_client.model.documents_list import DocumentsList
+from clarivate.wos_starter.client.api import documents_api
+from clarivate.wos_starter.client.model.document import Document
+from clarivate.wos_starter.client.model.documents_list import DocumentsList
 # Defining the host is optional and defaults to http://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = clarivate_wos_starter_client.Configuration(
+configuration = clarivate.wos_starter.client.Configuration(
     host = "http://example.com"
 )
 
 
 
 # Enter a context with an instance of the API client
-with clarivate_wos_starter_client.ApiClient(configuration) as api_client:
+with clarivate.wos_starter.client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = documents_api.DocumentsApi(api_client)
     q = "q_example" # str | 
@@ -156,7 +156,7 @@ sort_field = "sortField_example" # str | Order by field(s). Field name and order
         # Query Web of Science documents 
         api_response = api_instance.documents_get(q, db=db, page=page, limit=limit, sort_field=sort_field)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling DocumentsApi->documents_get: %s\n" % e)
 ```
 
@@ -201,21 +201,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in clarivate_wos_starter_client.apis and clarivate_wos_starter_client.models may fail with a
+If the OpenAPI document is large, imports in clarivate.wos_starter.client.apis and clarivate.wos_starter.client.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from clarivate_wos_starter_client.api.default_api import DefaultApi`
-- `from clarivate_wos_starter_client.model.pet import Pet`
+- `from clarivate.wos_starter.client.api.default_api import DefaultApi`
+- `from clarivate.wos_starter.client.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.apis import *
-from clarivate_wos_starter_client.models import *
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.apis import *
+from clarivate.wos_starter.client.models import *
 ```
 

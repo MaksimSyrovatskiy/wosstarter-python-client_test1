@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.document_names_authors import DocumentNamesAuthors
-from clarivate_wos_starter_client.model.document_names_inventors import DocumentNamesInventors
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.document_names_authors import DocumentNamesAuthors
+from clarivate.wos_starter.client.model.document_names_inventors import DocumentNamesInventors
 globals()['DocumentNamesAuthors'] = DocumentNamesAuthors
 globals()['DocumentNamesInventors'] = DocumentNamesInventors
-from clarivate_wos_starter_client.model.document_names import DocumentNames
+from clarivate.wos_starter.client.model.document_names import DocumentNames
 
 
 class TestDocumentNames(unittest.TestCase):

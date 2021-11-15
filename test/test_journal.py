@@ -11,10 +11,10 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.journal_links import JournalLinks
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.journal_links import JournalLinks
 globals()['JournalLinks'] = JournalLinks
-from clarivate_wos_starter_client.model.journal import Journal
+from clarivate.wos_starter.client.model.journal import Journal
 
 
 class TestJournal(unittest.TestCase):
