@@ -10,8 +10,8 @@
 
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.api.journals_api import JournalsApi  # noqa: E501
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.api.journals_api import JournalsApi  # noqa: E501
 
 
 class TestJournalsApi(unittest.TestCase):

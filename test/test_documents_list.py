@@ -11,12 +11,12 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.document import Document
-from clarivate_wos_starter_client.model.metadata import Metadata
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.document import Document
+from clarivate.wos_starter.client.model.metadata import Metadata
 globals()['Document'] = Document
 globals()['Metadata'] = Metadata
-from clarivate_wos_starter_client.model.documents_list import DocumentsList
+from clarivate.wos_starter.client.model.documents_list import DocumentsList
 
 
 class TestDocumentsList(unittest.TestCase):

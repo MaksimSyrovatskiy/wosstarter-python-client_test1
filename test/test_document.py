@@ -11,20 +11,20 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.document_citations import DocumentCitations
-from clarivate_wos_starter_client.model.document_identifiers import DocumentIdentifiers
-from clarivate_wos_starter_client.model.document_keywords import DocumentKeywords
-from clarivate_wos_starter_client.model.document_links import DocumentLinks
-from clarivate_wos_starter_client.model.document_names import DocumentNames
-from clarivate_wos_starter_client.model.document_source import DocumentSource
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.document_citations import DocumentCitations
+from clarivate.wos_starter.client.model.document_identifiers import DocumentIdentifiers
+from clarivate.wos_starter.client.model.document_keywords import DocumentKeywords
+from clarivate.wos_starter.client.model.document_links import DocumentLinks
+from clarivate.wos_starter.client.model.document_names import DocumentNames
+from clarivate.wos_starter.client.model.document_source import DocumentSource
 globals()['DocumentCitations'] = DocumentCitations
 globals()['DocumentIdentifiers'] = DocumentIdentifiers
 globals()['DocumentKeywords'] = DocumentKeywords
 globals()['DocumentLinks'] = DocumentLinks
 globals()['DocumentNames'] = DocumentNames
 globals()['DocumentSource'] = DocumentSource
-from clarivate_wos_starter_client.model.document import Document
+from clarivate.wos_starter.client.model.document import Document
 
 
 class TestDocument(unittest.TestCase):

@@ -1,4 +1,4 @@
-# clarivate_wos_starter_client.JournalsApi
+# clarivate.wos_starter.client.JournalsApi
 
 All URIs are relative to *http://example.com*
 
@@ -18,19 +18,19 @@ Method | HTTP request | Description
 
 ```python
 import time
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.api import journals_api
-from clarivate_wos_starter_client.model.journals_list import JournalsList
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.api import journals_api
+from clarivate.wos_starter.client.model.journals_list import JournalsList
 from pprint import pprint
 # Defining the host is optional and defaults to http://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = clarivate_wos_starter_client.Configuration(
+configuration = clarivate.wos_starter.client.Configuration(
     host = "http://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with clarivate_wos_starter_client.ApiClient() as api_client:
+with clarivate.wos_starter.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     issn = "issn_example" # str |  (optional)
@@ -40,7 +40,7 @@ with clarivate_wos_starter_client.ApiClient() as api_client:
     try:
         api_response = api_instance.journals_get(issn=issn)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling JournalsApi->journals_get: %s\n" % e)
 ```
 
@@ -83,19 +83,19 @@ No authorization required
 
 ```python
 import time
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.api import journals_api
-from clarivate_wos_starter_client.model.journal import Journal
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.api import journals_api
+from clarivate.wos_starter.client.model.journal import Journal
 from pprint import pprint
 # Defining the host is optional and defaults to http://example.com
 # See configuration.py for a list of all supported configuration parameters.
-configuration = clarivate_wos_starter_client.Configuration(
+configuration = clarivate.wos_starter.client.Configuration(
     host = "http://example.com"
 )
 
 
 # Enter a context with an instance of the API client
-with clarivate_wos_starter_client.ApiClient() as api_client:
+with clarivate.wos_starter.client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = journals_api.JournalsApi(api_client)
     uid = "uid_example" # str | 
@@ -104,7 +104,7 @@ with clarivate_wos_starter_client.ApiClient() as api_client:
     try:
         api_response = api_instance.journals_uid_get(uid)
         pprint(api_response)
-    except clarivate_wos_starter_client.ApiException as e:
+    except clarivate.wos_starter.client.ApiException as e:
         print("Exception when calling JournalsApi->journals_uid_get: %s\n" % e)
 ```
 

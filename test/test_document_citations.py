@@ -11,8 +11,8 @@
 import sys
 import unittest
 
-import clarivate_wos_starter_client
-from clarivate_wos_starter_client.model.document_citations import DocumentCitations
+import clarivate.wos_starter.client
+from clarivate.wos_starter.client.model.document_citations import DocumentCitations
 
 
 class TestDocumentCitations(unittest.TestCase):
